@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 //import './App.css';
 import Toolbar from './components/Toolbar/Toolbar';
+import Topologicalmap from './components/Topologicalmap/Topologicalmap';
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
       <div className="App"> 
         <Toolbar />
         <main style={{marginTop: '64px'}}>
-          <p>This is the page content!</p>
+          <Topologicalmap />
         </main>
       </div>
     );
