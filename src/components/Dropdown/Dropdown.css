@@ -27,6 +27,11 @@
     color : #FFE6C6;
 }
 
+.dropdown-menu>li {
+    padding: 0px 20px 0px 20px;
+}
+
+
 .dropdown-menu>li>a {
     background-color: #423b38;
     color : #FFE6C6;
@@ -35,6 +40,14 @@
 .dropdown-menu>li>a:hover{
     background-color: green;
     color : #FFE6C6;
+}
+
+.color-palette>li>a{
+    background-color: #423b38;
+}
+
+.color-palette>li>a:hover{
+    background-color: #423b38;
 }
 
 .btn-default.focus, .btn-default:focus, .btn-group.active, .btn-group.active.focus,  .btn-group.active:hover, .btn-group.active:focus, .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open>.dropdown-toggle.btn-default.focus, .open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {

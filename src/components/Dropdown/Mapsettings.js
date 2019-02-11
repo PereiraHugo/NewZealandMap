@@ -1,6 +1,7 @@
 import React from 'react';
 import './Dropdown.css';
 import { ButtonToolbar, DropdownButton, MenuItem } from 'react-bootstrap';
+import ColorPalette from './../Mapsettings/ColorPalette';
 
 class MapSettings extends React.Component {
     constructor(props) {
@@ -17,7 +18,9 @@ class MapSettings extends React.Component {
                     <MenuItem divider />
                     <MenuItem eventKey="3">Something else here</MenuItem>
                     <MenuItem divider />
-                    <MenuItem eventKey="4">Separated link</MenuItem>
+                    <MenuItem eventKey="4" id="color-palette">
+                        <ColorPalette />
+                    </MenuItem>
                 </DropdownButton>
             </ButtonToolbar>
         );

@@ -7,7 +7,7 @@ const toolbar = props => (
     <header className="toolbar">
         <nav className="toolbar_navigation">
             <div className="toolbar_logo">
-                <a href="/">THE LOGO</a>
+                <a href="/"><img src={"./logo_topo.svg"} style={{height:'56px'}}/></a>
             </div>
             <MapChoice />
             <MapSettings />
