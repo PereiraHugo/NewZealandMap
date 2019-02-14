@@ -25,34 +25,23 @@ class BasicMap extends Component {
     const svg = d3.select(this.refs.anchor),
         {width, height} = this.props;
 
-    const projection = d3.geoConicConformal()
-        .scale(2)
-        .translate([width / 2, height / 2]);
+    const projection = d3.geoMercator()
+        .scale(800)
+        .translate([ -2000, -450]);
     
     const path = d3.geoPath(projection)
 
     const nz = this.state.nzCoast;
 
-    const zoom = d3.zoom()
-    .scaleExtent([1, 8])
-
     svg.append("defs").append("path")
-           .attr("id", "land")
+           .attr("id", "districts")
            .datum(topojson.feature(nz, nz.objects.nz_regions))
            .attr("d", path);
- 
-        svg.append("clipPath")
-           .attr("id", "clip-land")
-           .append("use")
-           .attr("xlink:href", "#land");
  
         svg.append("path")
            .attr("class", "state-boundaries")
            .datum(topojson.mesh(nz, nz.objects.nz_regions, function(a, b) { return a !== b; }))
            .attr("d", path);
-
-    svg.call(zoom)
-    .call(zoom.event);
 
   }
 

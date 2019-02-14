@@ -13,14 +13,13 @@ path {
   
   .district-boundaries {
     pointer-events: none;
-    fill: none;
+    fill: blue;
     stroke: green;
     stroke-width: .5px;
   }
   
   .state-boundaries {
     pointer-events: none;
-    fill: none;
-    stroke: #fff;
+    fill: black;
     stroke-width: 1.5px;
   }
