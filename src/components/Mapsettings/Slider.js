@@ -21,6 +21,7 @@ class StepSlider extends React.Component {
 
   handleChange = (event, value) => {
     this.setState({ value });
+    console.log(value);
   };
 
   render() {
@@ -30,7 +31,7 @@ class StepSlider extends React.Component {
     return (
       <div className={classes.root}>
         <Grid container spacing={24}>
-            <Grid item xs={8}>
+            <Grid item xs={3}>
                 <Slider
                 classes={{ container: classes.slider }}
                 value={value}
@@ -40,8 +41,8 @@ class StepSlider extends React.Component {
                 onChange={this.handleChange}
                 />
             </Grid>
-            <Grid item xs={4} style={{verticalAlign:'middle'}}>
-                {this.state.value}%
+            <Grid item xs={2} style={{verticalAlign:'middle'}}>
+                <p>{this.state.value}%</p>
             </Grid>
         </Grid>
       </div>

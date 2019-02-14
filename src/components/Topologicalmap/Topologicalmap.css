@@ -14,7 +14,7 @@ path {
   .district-boundaries {
     pointer-events: none;
     fill: none;
-    stroke: #fff;
+    stroke: green;
     stroke-width: .5px;
   }
   

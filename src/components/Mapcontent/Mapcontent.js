@@ -8,13 +8,13 @@ class Mapcontent extends React.Component {
     render() {
         return (
             <Grid container spacing={24} style={{paddingLeft:'20px'}}>
-                <Grid item xs={4}>
+                <Grid item xs={2}>
                     <ColorPalette />
                     <StepSlider />
                 </Grid>
-                <Grid item xs={8}>
-                    <svg width="960" height="600">
-                        <BasicMap width={960} height={600} />        
+                <Grid item xs={10}>
+                    <svg width="782" height="628">
+                        <BasicMap width={782} height={628} />        
                     </svg>
                 </Grid>
             </Grid>
