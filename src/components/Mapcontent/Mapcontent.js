@@ -2,6 +2,7 @@ import React from 'react';
 import ColorPalette from './../Mapsettings/ColorPalette';
 import StepSlider from './../Mapsettings/Slider';
 import BasicMap from './../Topologicalmap/Topologicalmap';
+import BaseMap from './../Topologicalmap/trymap'
 import Grid from '@material-ui/core/Grid';
 
 class Mapcontent extends React.Component {
@@ -13,13 +14,11 @@ class Mapcontent extends React.Component {
                     <StepSlider />
                 </Grid>
                 <Grid item xs={10}>
-                    <svg width="782" height="628">
-                        <BasicMap width={782} height={628} />        
-                    </svg>
+                    <BaseMap />
                 </Grid>
             </Grid>
         );
     }
 }
-
+//<BasicMap width={782} height={628} /> 
 export default Mapcontent;
