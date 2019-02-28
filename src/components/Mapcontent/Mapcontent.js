@@ -1,7 +1,8 @@
 import React from 'react';
 import ColorPalette from './../Mapsettings/ColorPalette';
 import StepSlider from './../Mapsettings/Slider';
-import BasicMap from './../Topologicalmap/Topologicalmap';
+import BasicMap2 from './../Topologicalmap/Topologicalmap';
+import BasicMap from './../Topologicalmap/TopoTry';
 import BaseMap from './../Topologicalmap/trymap'
 import Grid from '@material-ui/core/Grid';
 
@@ -14,7 +15,7 @@ class Mapcontent extends React.Component {
                     <StepSlider />
                 </Grid>
                 <Grid item xs={10}>
-                    <BaseMap />
+                    <BasicMap />
                 </Grid>
             </Grid>
         );

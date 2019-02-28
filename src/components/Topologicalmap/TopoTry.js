@@ -12,7 +12,7 @@ const wrapperStyles = {
   margin: "0 auto",
 }
 
-class BasicMap extends Component {
+class TopoTry extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,42 +25,30 @@ class BasicMap extends Component {
       <div style={wrapperStyles}>
         <ComposableMap
           projectionConfig={{
-            scale: 205,
+            scale: 1500,
             rotation: [-11,0,0],
           }}
-          width={980}
-          height={551}
+          width={840}
+          height={400}
           style={{
             width: "100%",
             height: "auto",
           }}
           >
-          <ZoomableGroup center={[0,20]} disablePanning>
-            <Geographies geography="nz-coastlines-topo-1500k.json">
+          <ZoomableGroup center={[170,-40]} disablePanning>
+            <Geographies geography="Coastline-simplified.topojson">
               {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
                 <Geography
                   key={i}
                   geography={geography}
                   projection={projection}
                   style={{
-                    default: {
-                      fill: this.state.color,
-                      stroke: "#607D8B",
-                      strokeWidth: 0.75,
-                      outline: "none",
-                    },
                     hover: {
-                      fill: "#607D8B",
-                      stroke: "#607D8B",
+                      fill: "#ffffff",
+                      stroke: "#000000",
                       strokeWidth: 0.75,
                       outline: "none",
-                    },
-                    pressed: {
-                      fill: "#FF5722",
-                      stroke: "#607D8B",
-                      strokeWidth: 0.75,
-                      outline: "none",
-                    },
+                    }
                   }}
                 />
               ))}
@@ -71,3 +59,5 @@ class BasicMap extends Component {
     )
   }
 }
+
+export default TopoTry
